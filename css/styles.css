@@ -1,0 +1,301 @@
+/* General styles */
+html, body {
+    height: 100%; /* Ensures full height for flexbox */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Make footer stick to bottom */
+}
+
+body {
+    background-image: url('/images/powersystems.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: backgroundTransition 30s infinite ease-in-out;
+}
+
+/* Keyframes for image transitions */
+@keyframes backgroundTransition {
+    0% {
+        background-image: url('/images/powersystems.png');
+    }
+    33% {
+        background-image: url('/images/powerelectronics.png');
+    }
+    66% {
+        background-image: url('/images/electricmachines.png');
+    }
+    100% {
+        background-image: url('/images/powersystems.png'); /* Loop back to the first image */
+    }
+}
+
+
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.5); /* Dark Electric Blue overlay */
+    z-index: -1;
+    border-radius: 10px;
+}
+
+header {
+    background-color: #003366; /* Dark Electric Blue */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+/* Navigation Styles */
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1.2em; /* Makes the tab text larger */
+    font-weight: bold; /* Makes the tab text bold */
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+    border-radius: 10px;
+}
+
+nav ul li a.active {
+    background-color: #006699; /* Darker blue for active tab */
+    color: #FFFFFF; /* White text on active tab */
+    border-radius: 10px; /* Rounded corners for active tab */
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #006699; /* Lighter blue on hover */
+    color: #FFFFFF;
+    border-radius: 10px; /* Ensure rounded corners on hover */
+}
+
+
+
+/* Home content styling */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between the image and the bio text */
+}
+
+.profile-image {
+    background-color: #FFFFFF; /* White background for profile image */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9); /* Soft shadow */
+    width: 300px; /* Adjust image size */
+    height: 300px; /* Adjust image size */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.bio-text {
+    flex: 1; /* Allows the bio text to take up the remaining space */
+    color: #FFFFFF; /* Ensure text color is visible on dark background */
+}
+
+main {
+    flex: 1; /* Pushes the footer down */
+    padding: 20px;
+    background-color: #003366; /* Dark Electric Blue */
+    max-width: 800px;
+    margin: 20px auto;
+    color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    background-color: #003366; /* Ensure background is visible */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9); /* Optional shadow */
+    padding: 10px; /* Add padding inside each item */
+}
+
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+    display: flex; /* Flexbox ensures it's centered if needed */
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-details {
+    flex: 1; /* Allows the text to take up the remaining space */
+}
+
+
+.experience-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #FFFFFF; /* Yellow for section headings */
+}
+
+.experience-details p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #FFFFFF; /* White text on dark background */
+}
+
+footer {
+    background-color: #003366; /* Footer background color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+    margin-top: auto;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    background-color: #003366;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+    padding: 10px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-item img.company-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9);
+}
+
+.project-item h3 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.project-item p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+
+.project-poster {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit the image size */
+    display: block; /* Ensures that the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9); /* Optional: subtle shadow */
+}
+
+/* General styles for the corner logos */
+.corner-logo {
+    width: 50px; /* Set the size of the logo */
+    height: 30px; /* Adjust the size if needed */
+    position: fixed; /* Changed from absolute to fixed */
+    z-index: 1000; /* Make sure it's above other content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 200, 102, 0.9); /* Optional: Add shadow for a nice effect */
+}
+
+/* Top Left Logo */
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+/* Top Right Logo */
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+/* Bottom Left Logo */
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Bottom Right Logo */
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Specifically target links inside the contact section */
+#contact-section a {
+    color: #FFEB3B; /* Yellow color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+#contact-section a:hover {
+    color: #FFDD00; /* Slightly darker yellow on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Make the content section take up remaining space */
+#content {
+    flex: 1; /* This will make the content section grow and push the footer down */
+}
+
+/* Styling for images under Contact section */
+.contact-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    margin-top: 20px;
+}
+
+.contact-image {
+    width: 250px; /* Set a fixed width for each image */
+    height: 150px; /* Keep the aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.contact-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
